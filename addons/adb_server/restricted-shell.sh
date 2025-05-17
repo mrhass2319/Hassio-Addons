@@ -15,6 +15,9 @@ while true; do
     elif [[ "$cmd" == "adb" ]]; then
         # Pass all arguments to adb safely
         adb "${args[@]}"
+     elif [[ "$cmd" == "apt" ]]; then
+        # Pass all arguments to adb safely
+        apt "${args[@]}"
     elif [[ "$cmd" == "curl" || "$cmd" == "wget" ]]; then
         if [[ "${args[-1]}" == *.apk ]]; then
             # Allow only .apk file downloads
